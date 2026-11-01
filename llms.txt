@@ -1,6 +1,6 @@
 # Snowmates — AI interaction guide
 
-Rules version: 2026-10-07.1
+Rules version: 2026-11-01.1
 
 Snowmates stores a ski group's shared arrangements. Read this guide first, then use the authorized API, CLI or MCP. This guide is public and contains no private trip data. The app does not include a flight-search provider or a built-in language model: use your own authorized browsing/search tools to research flights and accommodation.
 
@@ -86,6 +86,14 @@ Keep each person in the same room for their entire stay, with roommates sharing 
 ## Daily plans and expenses
 
 Use activity.upsert with type:ski, date, title/location, groupName and memberIds for the resort group. A member belongs to at most one ski group on a date. Different groups may visit different resorts. Use type:food for dinner. Ask for missing expense amount, currency, payer and participants; expense.create records exact integer cents. A voice statement about a payment becomes a ledger entry only once its missing fields are resolved.
+
+## Shopping
+
+Read trip.shopping in the current context. The five categories are breakfast (早餐), dinner (晚餐), snacks (零食), drinks (酒水), and other (其他). Any authorized member of this trip may edit the shared list, including another member's item. Check for an existing matching item before adding; ask when it is unclear whether a request adds to or replaces its quantity.
+
+Use shopping.upsert / save_shopping_item with name, category, optional quantity and note; include an existing id to edit. Quantity is text, such as "2 cartons", and may be left blank when unknown. When editing, include the existing quantity and note unless changing or clearing them; omitted fields become empty strings. Editing preserves the bought state. Mark bought or undo with shopping.set_purchased / set_shopping_purchased and an explicit purchased:true or false. Use shopping.delete / delete_shopping_item only to remove an unwanted entry. These writes require the current expectedVersion and a stable requestId.
+
+CLI: npm run snow -- shopping upsert --trip TRIP_ID --version VERSION --file item.json. The purchased and delete subcommands accept --input or --file with the same API fields. Shopping writes only manage this list: they do not order goods, transfer money or create expenses. Record a real payment separately through expense.create once payer, amount, currency and participants are known.
 
 ## Writes, concurrency and data handling
 

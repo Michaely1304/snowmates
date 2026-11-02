@@ -16,6 +16,8 @@ The user shares a trip-specific editing link with a fragment containing trip and
 
 Set SNOW_MODE=shared, SNOW_API_URL to the API base above, and SNOW_API_TOKEN to the editing key. Existing CLI and MCP commands work against this API. Always start with trip.get_context for the supplied tripId, verify the response, and use actual member IDs from that trip. All holders of the editing link have organizer-level access; personal views are not separate authentication. Member-specific token management is not available in this edition.
 
+On first opening an editing link, each person creates their own trip profile or explicitly chooses an existing member. The browser remembers that choice per trip; the share link never includes it. The AI connection instructions include the person's Member ID. Use that explicit ID for their flights, preferences and expenses. Do not infer the person from viewer.memberId, the trip owner, the first member, or the alias "me": the shared API's principal is the organizer. If no Member ID was supplied, ask whom you represent and check the member list before creating a duplicate. On another browser or device, choose the existing profile again.
+
 All writes, including expense.create and proposal.create, require the current expectedVersion and a stable requestId. On VERSION_CONFLICT, refresh and reconcile before submitting a new intended write. A timeout may follow a successful write: retry the same payload and requestId. Do not blindly overwrite changes. New trips require a client-generated 32-byte base64url editing key (43 characters) in the Authorization header, even though no user login is needed. Reuse that key and requestId for retries.
 
 ## First conversation: ask only what is missing

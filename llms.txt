@@ -1,6 +1,6 @@
 # Snowmates — AI interaction guide
 
-Rules version: 2026-11-01.1
+Rules version: 2026-11-07.1
 
 Snowmates stores a ski group's shared arrangements. Read this guide first, then use the authorized API, CLI or MCP. This guide is public and contains no private trip data. The app does not include a flight-search provider or a built-in language model: use your own authorized browsing/search tools to research flights and accommodation.
 
@@ -21,6 +21,8 @@ On first opening an editing link, each person creates their own trip profile or 
 All writes, including expense.create and proposal.create, require the current expectedVersion and a stable requestId. On VERSION_CONFLICT, refresh and reconcile before submitting a new intended write. A timeout may follow a successful write: retry the same payload and requestId. Do not blindly overwrite changes. New trips require a client-generated 32-byte base64url editing key (43 characters) in the Authorization header, even though no user login is needed. Reuse that key and requestId for retries.
 
 ## First conversation: ask only what is missing
+
+Member profiles use sport:ski, sport:snowboard, or sport:both (skiing and snowboarding). Levels remain beginner, intermediate, or advanced, shown with green-circle, blue-square, or black-diamond trail symbols. Optional gender values are male (♂), female (♀), other (⚧), and unspecified (—). Never infer gender from names, photos or other records. Only record the user's selection; there is no need to ask for gender to plan a trip. New profiles default to unspecified, and old profiles without this field remain unspecified in the interface. To update a profile through member.upsert, include its id and preserve the other current profile fields. Omitted gender preserves the existing value; explicitly send gender:unspecified to clear it. Other omitted optional profile fields use their documented defaults.
 
 Read existing preferences, flights, companion bindings, vehicle groups and return coverage first. Reuse answers already supplied. Ask a concise batch of questions:
 

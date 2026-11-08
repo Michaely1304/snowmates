@@ -1,6 +1,6 @@
 # Snowmates — AI interaction guide
 
-Rules version: 2026-11-07.2
+Rules version: 2026-11-07.3
 
 Snowmates stores a ski group's shared arrangements. Read this guide first, then use the authorized API, CLI or MCP. This guide is public and contains no private trip data. The app does not include a flight-search provider or a built-in language model: use your own authorized browsing/search tools to research flights and accommodation.
 
@@ -89,7 +89,7 @@ Keep each person in the same room for their entire stay, with roommates sharing 
 
 ## Lodging prices
 
-An organizer saves one whole-trip lodging budget through lodging.pricing_save / save_lodging_pricing, or CLI lodging price. Input: {totalCents,commonCents,roomCents:{ROOM_ID:CENTS}}. Include every current room. The total is for the whole stay in the trip currency, including any taxes/fees the organizer chooses to include. Do not invent prices from room capacity. All amounts are integer cents; commonCents + sum(roomCents) must equal totalCents. To express percentages, convert the common share of the total first, then distribute the remaining room budget using room percentages; reconcile rounding to the exact cent.
+An organizer saves one whole-trip lodging budget through lodging.pricing_save / save_lodging_pricing, or CLI lodging price. Input: {totalCents,commonCents,roomCents:{ROOM_ID:CENTS}}. Include every current room. The total is for the whole stay in the trip currency, including any taxes/fees the organizer chooses to include. Do not invent prices from room capacity. All amounts are integer cents; commonCents + sum(roomCents) must equal totalCents. Common percentages refer to the total, while room percentages refer to the amount remaining after common costs. Convert only the room percentage explicitly entered by the user; preserve every other room's amount. Changing the total or common costs also preserves existing room amounts. Never automatically normalize percentages, redistribute a difference or adjust other rooms to reconcile rounding. Show any shortfall or excess and ask the user which prices to change before saving.
 
 Read lodgingCosts in the latest context for each member's commonCents, roomCents and totalCents. Common costs are proportional to actual assigned person-nights; a room's total is proportional to the nights each member actually stays in that room. Split stays count toward their respective rooms. Empty-room costs remain unallocated instead of being silently charged to other rooms. Complete all assignments and room prices and resolve unallocated costs before posting; do not fabricate occupants to clear a warning.
 

@@ -3,4 +3,4 @@
 :HL["/snowmates/_next/static/css/57097030f7643843.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"UAlpIGI6P51vL7eyYDA0T","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"Pzlz-8o3I-v72YALKBJEg","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

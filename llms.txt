@@ -1,6 +1,6 @@
 # Snowmates — AI interaction guide
 
-Rules version: 2026-11-07.5
+Rules version: 2026-11-09.1
 
 Snowmates stores a ski group's shared arrangements. Read this guide first, then use the authorized API, CLI or MCP. This guide is public and contains no private trip data. The app does not include a flight-search provider or a built-in language model: use your own authorized browsing/search tools to research flights and accommodation.
 
@@ -20,6 +20,15 @@ On first opening an editing link, each person creates their own trip profile or 
 
 All writes, including expense.create and proposal.create, require the current expectedVersion and a stable requestId. On VERSION_CONFLICT, refresh and reconcile before submitting a new intended write. A timeout may follow a successful write: retry the same payload and requestId. Do not blindly overwrite changes. New trips require a client-generated 32-byte base64url editing key (43 characters) in the Authorization header, even though no user login is needed. Reuse that key and requestId for retries.
 
+
+## Remove or restore a member
+
+Only an organizer may call member.delete or member.restore, each with input {id}, the latest expectedVersion and a stable requestId. Use an exact member ID from authorized context and act only on the member the user selected. The trip owner cannot be removed. CLI: npm run snow -- members delete --trip TRIP_ID --version VERSION --input '{"id":"MEMBER_ID"}', or members restore with the same flags. MCP: delete_member / restore_member with tripId, expectedVersion, requestId and id.
+
+Removal archives the profile in trip.removedMembers with its removedAt timestamp and removes it from the current member list, but preserves past bills, debts and historical references. It clears the member's room assignments, flights, flight preferences/options, ride passenger/driver arrangements and explicit activity memberships. If the member was driving a ride, that ride is released; do not automatically choose a replacement driver or reassign passengers. Activities originally applying to everyone (empty memberIds) remain. An explicit group that loses its last member is removed, not reinterpreted as an all-member activity. Other members' explicit companion references retain both the archived memberId and name and become pending while that profile is removed. Never drop the ID or automatically bind a different active person with the same name; only restoration of that profile or an explicit rebind may resolve the target. Read fresh context after removal, check return coverage and review any unassigned travel or lodging.
+
+Restore PROFILE ONLY with the same member ID. Restoration does not recreate old rooms, flights, preferences/options, rides or explicit activity groups; arrange those again from current plans. Local member-scoped AI credentials are revoked on removal and stay revoked after restoration; issue new credentials if authorized. Shared editing keys are separate: removing or restoring a profile does not revoke or rotate a shared editing key. A person who still has that key retains its editing capability. Do not claim that removing a profile signs someone out, blocks shared bearer access or provides identity-based authorization.
+
 ## First conversation: ask only what is missing
 
 Member profiles use sport:ski, sport:snowboard, or sport:both (skiing and snowboarding). Levels remain beginner, intermediate, or advanced, shown with green-circle, blue-square, or black-diamond trail symbols. Optional gender values are male (♂), female (♀), other (⚧), and unspecified (—). Never infer gender from names, photos or other records. Only record the user's selection; there is no need to ask for gender to plan a trip. New profiles default to unspecified, and old profiles without this field remain unspecified in the interface. To update a profile through member.upsert, include its id and preserve the other current profile fields. Omitted gender preserves the existing value; explicitly send gender:unspecified to clear it. Other omitted optional profile fields use their documented defaults.
@@ -35,7 +44,7 @@ Persist the answers using flight.preferences_upsert / save_flight_preferences be
 
 ## Companion binding and planning order
 
-Save companions as { name, memberId? }. If the person is not registered, save their name now; do not create a fake member or omit the binding. Context planning.bindings resolves an exact unique name when the person joins. An ambiguous name needs clarification. pending means not yet registered; waiting means registered without a usable plan.
+Save companions as { name, memberId? }. If the person is not registered, save their name now; do not create a fake member or omit the binding. Context planning.bindings resolves an exact unique name when the person joins. An ambiguous name needs clarification. pending means not yet registered or an explicitly referenced profile is archived; waiting means active without a usable plan. An explicit memberId takes precedence over a matching name: preserve an archived ID and its name as pending instead of binding another active person with the same name.
 
 Use the earliest existing planned/booked itinerary in a bound group as its reference. The person planning later should first search for the same flight, or a compatible airport arrival for the same car when the user permits that. A mutual binding must not make A and B wait on each other forever: if no one has a plan, the first ready traveler can record one and others can follow later. Never change someone else's existing plan to make your own quote fit. Read context again before presenting and saving results.
 

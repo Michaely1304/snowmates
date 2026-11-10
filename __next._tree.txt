@@ -2,4 +2,4 @@
 :HL["/snowmates/_next/static/css/99c39f73b5c3ee3b.css","style"]
 :HL["/snowmates/_next/static/css/e937be3e66c3909a.css","style"]
 1:[["children",{"s":"__PAGE__","h":160}]]
-0:{"b":"NL1TwOX7W04XO4RvuoUef","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"kYlgYZAG6yPsHBIK9BYtK","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

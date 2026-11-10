@@ -3,4 +3,4 @@
 :HL["/snowmates/_next/static/css/01018622b8c28b1e.css","style"]
 :HL["/snowmates/_next/static/css/dde9dd045bc097b2.css","style"]
 1:[["children",{"s":"__PAGE__","h":160}]]
-0:{"b":"sKZIYK_sw45GgLBGbZZ7a","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"ivuPErdxZZyhkYGu09mHV","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

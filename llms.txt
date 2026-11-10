@@ -65,7 +65,7 @@ Options are candidates, not tickets. Ask which option the user chooses; flight.o
 
 ## Flights and cars
 
-- Preserve each member's individual flight number, relevant airport event date, time and timezone.
+- Preserve each member's individual flight number when known, relevant airport event date, time and timezone. For flight.upsert / upsert_my_flight, the number is optional: omit it or leave it blank when unknown; do not invent one or ask only to fill it. Airports, date and time remain required. Researched flight.options_save candidates still require actual flight numbers.
 - Arrival flight time = landing at the destination airport. Departure flight time = takeoff from the airport leaving the ski destination. Convert times before comparing different zones.
 - Display members grouped by their assigned vehicle. An unassigned flight remains visibly unassigned. Equal landing times alone are not a confirmed car assignment.
 - Prefer the same flight/compatible arrivals for a shared car. Split the group when it exceeds capacity; never silently drop people.

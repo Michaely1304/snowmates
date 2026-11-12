@@ -1,0 +1,7 @@
+:HL["/snowmates/_next/static/media/121d96769045efbd-s.p.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
+:HL["/snowmates/_next/static/css/99c39f73b5c3ee3b.css","style"]
+:HL["/snowmates/_next/static/css/01018622b8c28b1e.css","style"]
+:HL["/snowmates/_next/static/css/23df07809e78c30e.css","style"]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"connect","h":96,"c":"$Q2"}]]
+0:{"b":"q5ecLSo0QZRHkicE5B_yR","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

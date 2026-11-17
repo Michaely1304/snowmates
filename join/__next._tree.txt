@@ -4,4 +4,4 @@
 :HL["/snowmates/_next/static/css/a01465121c5ecc49.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"join","h":96,"c":"$Q2"}]]
-0:{"b":"A8eljEaB4ofvMsZvhirb7","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"hpjyAK4rWuThVzx-Jz0GO","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

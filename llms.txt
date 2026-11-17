@@ -1,6 +1,6 @@
 # Snowmates — AI interaction guide
 
-Rules version: 2026-11-16.1
+Rules version: 2026-11-16.2
 
 Snowmates stores a ski group's shared arrangements. Read this guide first, then use the authorized API, CLI or MCP. This guide is public and contains no private trip data. The app does not include a flight-search provider or a built-in language model: use your own authorized browsing/search tools to research flights and accommodation.
 
@@ -82,6 +82,10 @@ Each option needs a real sourceUrl, quotedAt timestamp, currency, totalPriceCent
 Options are candidates, not tickets. Ask which option the user chooses; flight.option_select / select_flight_option stores planned flights only. A ticket becomes booked only after the user confirms an actual purchase. Recheck current prices before any purchase. No Snowmates operation buys tickets or transfers money.
 
 ## Flights and cars
+
+Start with people: call ride.group with {flightIds, vehicleId?} to use an existing vehicle, or {flightIds, name?, kind?} to create a placeholder. A missing/blank name gets an automatic group name. The operation atomically creates a draft ride and, if needed, a provisional vehicle. No existing car or driver is required. Defaults remain SUV4, MPV4 and pickup5, including the eventual driver. Retain the whole selection or reject over-capacity; never silently drop people. CLI: ride group with --trip, --version and --input. MCP: group_transfer.
+
+Draft groups can leave driverId empty. They reserve their linked flights, but do not occupy actual vehicle/driver time or count as confirmed transport coverage. Once details are known, update the vehicle with provisional:false and the ride with draft:false and an explicit willing driver. Confirmation runs the normal date, flight, seat, overlap and remaining-car checks. Omitting these flags on an existing edit preserves their values. Removing a driver from a draft clears that driver while preserving other group members; confirmed rides retain the existing removal behavior.
 
 - Preserve each member's individual flight number when known, relevant airport event date, time and timezone. For flight.upsert / upsert_my_flight, the number is optional: omit it or leave it blank when unknown; do not invent one or ask only to fill it. Airports, date and time remain required. Researched flight.options_save candidates still require actual flight numbers.
 - Arrival flight time = landing at the destination airport. Departure flight time = takeoff from the airport leaving the ski destination. Convert times before comparing different zones.

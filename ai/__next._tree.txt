@@ -1,6 +1,6 @@
 :HL["/snowmates/_next/static/media/121d96769045efbd-s.p.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
 :HL["/snowmates/_next/static/css/bdddb806b1d47ba4.css","style"]
-:HL["/snowmates/_next/static/css/63475ac74c238dd1.css","style"]
+:HL["/snowmates/_next/static/css/08dca49969e551cb.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"ai","h":96,"c":"$Q2"}]]
-0:{"b":"NLCA4vQ-y49z5xvNHxr7z","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"Kwa0cKQhQvgeWpMfSMySn","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

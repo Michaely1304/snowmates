@@ -1,6 +1,6 @@
 # Snowmates — AI interaction guide
 
-Rules version: 2026-11-16.3
+Rules version: 2026-11-17.1
 
 Snowmates stores a ski group's shared arrangements. Read this guide first, then use the authorized API, CLI or MCP. This guide is public and contains no private trip data. The app does not include a flight-search provider or a built-in language model: use your own authorized browsing/search tools to research flights and accommodation.
 
@@ -119,6 +119,8 @@ On re-import, missing/null capacities preserve a previously provided lower room 
 Ask for the room/bed section only if the listing cannot be read, the room a bed belongs to is unclear, or the actual bed count is missing. Missing bed type or people-per-bed capacity alone is not a blocker: use unknown and the defaults above. Do not fabricate beds or infer room layouts from a property-wide guest count. Do not scrape around access restrictions or treat a sofa as an agreed bed unless the listing and organizer's plan support it. You may save known rooms and clearly state what remains unknown.
 
 Keep each person in the same room for their entire stay, with roommates sharing a room. Use room.assign_stay / assign_room_for_stay, including roomId:null to unassign. Display roommates together. The API retains dates for capacity checks and old records, but users do not need a nightly allocation grid. Never overwrite unrelated room assignments during an import.
+
+To correct a room, use organizer-only room.upsert with its existing id, name, beds (people capacity), and description. Omit bedDetails when unchanged; a supplied nonempty list replaces bed details, and [] explicitly removes them while retaining the supplied people capacity. Keep any provided lower per-bed limits. Do not send capacitySource, evidence, sourceId or verifiedAt; original source evidence remains separate from manual corrections. Room assignments and pricing are preserved, and reducing capacity below any occupied night is rejected rather than removing occupants.
 
 ## Lodging prices
 

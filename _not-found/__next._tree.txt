@@ -1,5 +1,5 @@
-:HL["/snowmates/_next/static/css/bdddb806b1d47ba4.css","style"]
+:HL["/snowmates/_next/static/css/6e0ac71e732f4066.css","style"]
 :HL["/snowmates/_next/static/css/08dca49969e551cb.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"bXzjrP29MAZZ0fAj5ALm0","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"5vHLwsNrqnjwJbGrp2LvH","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

@@ -1,30 +1,34 @@
 1:"$Sreact.fragment"
 2:I[1133,[],""]
 3:I[4297,[],""]
-4:"static/chunks/d28dc9c7-44ae40f487fbe00c.js"
-5:"static/chunks/226-193949b61580c859.js"
-6:"static/chunks/187-fe65899284ef9de8.js"
-7:"static/chunks/app/layout-59d1b6cb2b947c6d.js"
-8:I[7575,["339","$4","226","$5","187","$6","177","$7"],"AgentFooter"]
-a:I[1076,[],"ClientPageRoot"]
-b:"static/chunks/639-186066256508e803.js"
-c:"static/chunks/app/page-ff472b2c996868ef.js"
-d:I[9446,["339","$4","226","$5","187","$6","639","$b","974","$c"],"default"]
-10:I[1872,[],"OutletBoundary"]
-11:"$Sreact.suspense"
-13:"ViewportBoundary"
-14:I[1872,[],"$13"]
-16:"MetadataBoundary"
-17:I[1872,[],"$16"]
-19:I[7567,[],"default",1]
-:HL["/snowmates/_next/static/css/bdddb806b1d47ba4.css","style"]
+4:"static/chunks/568-66e5f4bdc1fba52f.js"
+5:"static/chunks/299-7ff387c042ef6cb4.js"
+6:"static/chunks/app/not-found-47cfe9471b484556.js"
+7:I[1377,["568","$4","299","$5","345","$6"],"default"]
+8:"static/chunks/d28dc9c7-44ae40f487fbe00c.js"
+9:"static/chunks/226-193949b61580c859.js"
+a:"static/chunks/290-1e61ae47166237ed.js"
+b:"static/chunks/app/layout-bac692acfefebd0c.js"
+c:I[7575,["339","$8","226","$9","299","$5","290","$a","177","$b"],"AgentFooter"]
+e:I[1076,[],"ClientPageRoot"]
+f:"static/chunks/639-196a4133c351a004.js"
+10:"static/chunks/app/page-6eb3a7930215c8c5.js"
+11:I[9446,["339","$8","226","$9","299","$5","290","$a","639","$f","974","$10"],"default"]
+14:I[1872,[],"OutletBoundary"]
+15:"$Sreact.suspense"
+17:"ViewportBoundary"
+18:I[1872,[],"$17"]
+1a:"MetadataBoundary"
+1b:I[1872,[],"$1a"]
+1d:I[7567,[],"default",1]
+:HL["/snowmates/_next/static/css/6e0ac71e732f4066.css","style"]
 :HL["/snowmates/_next/static/css/08dca49969e551cb.css","style"]
 :HL["/snowmates/_next/static/css/744453ed25560f31.css","style"]
-9:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","$La",null,{"Component":"$d","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@e","$@f"]}}],[["$","link","0",{"rel":"stylesheet","href":"/snowmates/_next/static/css/744453ed25560f31.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L10",null,{"children":["$","$11",null,{"name":"Next.MetadataOutlet","children":"$@12"}]}]]}],"p":false,"v":null}}]]
-0:{"P":null,"c":["",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/snowmates/_next/static/css/bdddb806b1d47ba4.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/snowmates/_next/static/css/08dca49969e551cb.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","className":"__variable_172038","children":[["$","head",null,{"children":[["$","link",null,{"rel":"alternate","type":"text/plain","href":"/snowmates/llms.txt","title":"Snowmates AI interaction guide"}],["$","link",null,{"rel":"describedby","type":"application/json","href":"/snowmates/.well-known/snowmates.json"}]]}],["$","body",null,{"children":[["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L8",null,{}]]}]]}]]}],"p":false,"v":null},"c":"$Q9"},"h":{"r":["$","$1","h",{"children":[null,["$","$L14",null,{"children":"$L15"}],["$","$L17",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$11",null,{"name":"Next.Metadata","children":"$L18"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$19",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"bXzjrP29MAZZ0fAj5ALm0"}
-e:{}
-f:"$9:0:1:d:r:props:children:0:props:serverProvidedParams:params"
-15:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-1a:I[2569,[],"IconMark"]
-12:null
-18:[["$","title","0",{"children":"Snowmates"}],["$","meta","1",{"name":"description","content":"滑雪旅行的航班、分车、住宿、每日安排与共同账本。AI 接入说明位于 /llms.txt。"}],["$","link","2",{"rel":"icon","href":"/snowmates/favicon.svg"}],["$","$L1a","3",{}]]
+d:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","$Le",null,{"Component":"$11","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@12","$@13"]}}],[["$","link","0",{"rel":"stylesheet","href":"/snowmates/_next/static/css/744453ed25560f31.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L14",null,{"children":["$","$15",null,{"name":"Next.MetadataOutlet","children":"$@16"}]}]]}],"p":false,"v":null}}]]
+0:{"P":null,"c":["",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/snowmates/_next/static/css/6e0ac71e732f4066.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/snowmates/_next/static/css/08dca49969e551cb.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","className":"__variable_172038","children":[["$","head",null,{"children":[["$","link",null,{"rel":"alternate","type":"text/plain","href":"/snowmates/llms.txt","title":"Snowmates AI interaction guide"}],["$","link",null,{"rel":"describedby","type":"application/json","href":"/snowmates/.well-known/snowmates.json"}]]}],["$","body",null,{"children":[["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L7",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$Lc",null,{}]]}]]}]]}],"p":false,"v":null},"c":"$Qd"},"h":{"r":["$","$1","h",{"children":[null,["$","$L18",null,{"children":"$L19"}],["$","$L1b",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$15",null,{"name":"Next.Metadata","children":"$L1c"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$1d",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"5vHLwsNrqnjwJbGrp2LvH"}
+12:{}
+13:"$d:0:1:d:r:props:children:0:props:serverProvidedParams:params"
+19:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1e:I[2569,[],"IconMark"]
+16:null
+1c:[["$","title","0",{"children":"Snowmates"}],["$","meta","1",{"name":"description","content":"和同行的朋友一起安排滑雪旅行，查看航班、接送和住宿，分摊共同费用。"}],["$","link","2",{"rel":"icon","href":"/snowmates/favicon.svg"}],["$","$L1e","3",{}]]
